@@ -9,3 +9,4 @@ set envs:
 - TARGET
 - INTERVAL
 - PATTERN (optional)
+- LIMIT (optional, default: 3)
