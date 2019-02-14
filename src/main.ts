@@ -12,7 +12,7 @@ import {
     getFolderPathStats
 } from "./utils";
 import {
-    interval
+    timer
 } from "rxjs";
 import {
     throttle,
@@ -109,7 +109,7 @@ async function doEverything() {
     await prune(TARGET, LIMIT);
 }
 
-interval(INTERVAL)
+timer(0, INTERVAL)
     .pipe(map(i => {
         mainLog(`tick: ${i}`);
         return i;
