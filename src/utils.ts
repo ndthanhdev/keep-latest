@@ -89,7 +89,7 @@ export async function isExist(path: string) {
 export async function copyToTarget(source: string, target: string) {
     utilLog('Creating target');
     await mkdir(target);
-    const temp = join(target, 'temp');
+    const temp = join(target, '.temp');
     utilLog('creating temp');
     await mkdir(temp);
     utilLog('copying to temp');
